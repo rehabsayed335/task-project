@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/css/bootstrap.min.css";
+body{
+    box-sizing: border-box;
+}
+.list
+{
+    list-style-type: none;
+}
+.red_text
+{
+    color: red;
+}
+.green_text
+{
+    color: green;
+}
+.line_text
+{
+    text-decoration-line: line-through;
+}

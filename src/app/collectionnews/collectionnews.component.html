@@ -1,0 +1,9 @@
+
+        <div>
+            <ul style="list-style-type: none">
+                <li *ngFor="let item of news">
+                    <hr/>
+                    <a routerLink='/News/item/{{item.ID}}' routerLinkActive="active">{{item.Name}}</a>
+                </li>
+            </ul>
+        </div>

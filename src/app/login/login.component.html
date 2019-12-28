@@ -1,0 +1,25 @@
+<div class="container">
+        <form [formGroup] ="formlogin">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" formControlName="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small  class="form-text text-muted" *ngIf="formlogin.controls['Email'].errors?.required">is required</small>
+                  <small  class="form-text text-muted" *ngIf="formlogin.controls['Email'].errors?.email">is not valid</small>
+                  <small  class="form-text text-muted" *ngIf="formlogin.controls['Email'].errors?.maxlength">max length is 30</small>
+                  
+                 
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                        <label for="exampleInputPassword1">mobile</label>
+                        <input type="text" class="form-control" formControlName="mobile" placeholder="mobile">
+
+                </div>
+      
+                <button type="submit" (click) ="login()" class="btn btn-primary" [disabled]="formlogin.invalid">Submit</button>
+              </form>
+
+</div>

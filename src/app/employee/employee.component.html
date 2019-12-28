@@ -1,0 +1,27 @@
+<label>title</label>
+<input type="text" #inputtitle>
+<button type="button" class="btn btn-primary" (click) ="settasks(inputtitle.value);inputtitle.value=''">Add</button>
+<div [hidden]="count==0" [class.red_text]="count >=3" [class.green_text]="count < 3">the length of tasks = {{count}}</div>
+<br/>
+<br/>
+<table class="table">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Title</td>
+            <td>State</td>
+            <td>delete</td>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of taskarray;let i = index" [class.line_text]="item.done == false">
+            <td>{{i+1}}</td>
+            <td>{{item.title}}</td>
+            <td><input type="checkbox" (change)="setdone(item)"></td>
+            <td><button class="btn btn-primary" (click)="deleteitem(item)">delete</button></td>
+        </tr>
+
+    </tbody>
+</table>
+
